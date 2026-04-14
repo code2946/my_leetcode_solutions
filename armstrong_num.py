@@ -1,12 +1,10 @@
-def armstrong(n:int)->bool:
-    nums=n
-    pop=0
-    power=len(str(n))
-    while nums>0:
-        last_digit=nums%10
-        nums=nums//10
+def armstrong_num(n:int)->bool:
+    num=n
+    pop =0
+    power = len(str(num))
+    while num!=0:
+        last_digit = num%10
         pop=pop + last_digit**power
-    print (pop)    
+        num = num//10
     return n==pop
-
-print(armstrong(1634))
+print(armstrong_num(153))    
